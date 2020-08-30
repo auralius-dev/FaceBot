@@ -5,6 +5,7 @@ const fs = require("fs");
 const request = require("request");
 const http = require("http");
 const express = require("express");
+const app = express();
 
 const readline = require("readline").createInterface({	//Allow input from console.
 	input: process.stdin,
@@ -43,17 +44,16 @@ bot.on("ready", () => {	//Start stuff when bot is ready.
 	});
 });
 
-const app = express();	//If a request is received respond with 200.
-app.get("/", (request, response) => {
+app.get("/", (request, response) => {	//If a request is received respond with 200.
 	console.log(getTime(), "Pong.\n");
 	response.sendStatus(200);
 });
+app.listen(3000);
 
-app.listen(process.env.PORT);
-setInterval(() => {	//Glitch likes to put projects to sleep after 5 minutes if theres no activity, so this pings it. (Currently doesn"t work) 666
-	console.log(getTime(), "Ping.\n");
-	http.get(`http://horn-adventurous-silence.glitch.me/`);
-}, 280000);
+//setInterval(() => {	//Glitch likes to put projects to sleep after 5 minutes if theres no activity, so this pings it. (Currently doesn"t work) 666
+//	console.log(getTime(), "Ping.\n");
+//	request("http://horn-adventurous-silence.glitch.me:3000");
+//}, 280000);
 
 bot.on("messageCreate", (msg) => {
 	//send back you
