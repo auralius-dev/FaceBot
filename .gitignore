@@ -1,0 +1,6 @@
+node_modules/
+images/api/*
+logs/
+start.bat
+readme.txt
+.env
