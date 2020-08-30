@@ -1,0 +1,1 @@
+The 'fast' folder is what I got when I spammed the bot. Need some way to add a query.

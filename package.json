@@ -1,0 +1,20 @@
+{
+  "name": "facebot",
+  "version": "1.0.0",
+  "description": "Face generating bot.",
+  "license": "AGPL-3.0-only",
+  "repository": "None",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "eris": "^0.7.2",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
