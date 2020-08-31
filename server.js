@@ -50,11 +50,6 @@ app.get("/", (request, response) => {	//If a request is received respond with 20
 });
 app.listen(3000);
 
-//setInterval(() => {	//Glitch likes to put projects to sleep after 5 minutes if theres no activity, so this pings it. (Currently doesn"t work) 666
-//	console.log(getTime(), "Ping.\n");
-//	request("http://horn-adventurous-silence.glitch.me:3000");
-//}, 280000);
-
 bot.on("messageCreate", (msg) => {
 	//send back you
 	if (msg.content.includes("!fuck")) {
